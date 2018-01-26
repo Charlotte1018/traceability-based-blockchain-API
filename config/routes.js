@@ -37,7 +37,9 @@ module.exports.routes = {
  // }
   'post /api/Account/createAccount': 'Account.createAccount',
   'get /api/Account/getBalance': 'Account.getBalance',
-  'post /api/Account/transfer': 'Account.transferAccount'
+  'post /api/Account/transfer': 'Account.transferAccount',
+  'get /api/Contract/public': 'Contract.publicVariable',
+  'post /api/Contract/company/register':'Contract.registerCompany'
 
   /***************************************************************************
   *                                                                          *

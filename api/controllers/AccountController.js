@@ -19,6 +19,17 @@ module.exports = {
             }
         })
     },
+    getAccounts: function (req, res) {
+        let params = req.query;
+        let web3 = web3j.web3();
+        let accounts = web3.eth.accounts;
+        res.send({
+            code: 0,
+            data: {
+                accounts: accounts
+            }
+        })
+    },
     //getBalance
     getBalance: function (req, res) {
         let params = req.query;

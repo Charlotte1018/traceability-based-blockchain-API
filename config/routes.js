@@ -34,13 +34,21 @@ module.exports.routes = {
 
   //'/': {
   //  view: 'homepage'
- // }
+  // }
   'post /api/Account/createAccount': 'Account.createAccount',
+  'get /api/Account/getAccounts': 'Account.getAccounts',
   'get /api/Account/getBalance': 'Account.getBalance',
   'post /api/Account/transfer': 'Account.transferAccount',
   'get /api/Contract/public': 'Contract.publicVariable',
-  'post /api/Contract/company/register':'Contract.registerCompany'
-
+  'post /api/Contract/company/register': 'Contract.registerCompany',
+  'post /api/Contract/company/registerBasicInfo': 'Contract.registerBasicInfo',
+  /**
+  * 新的粮食追溯合约接口
+  * get方法
+  */
+  'get /api/Contract/basicContractInfo':'Contract.basicContractInfo',
+  //企业注册公司信息
+  'post /api/Contract/enterpriseRegister':'Contract.enterpriseRegister'
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

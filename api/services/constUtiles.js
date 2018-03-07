@@ -1,6 +1,6 @@
 module.exports = {
     UserManagementAddress: '0xB8317F13caa2E9143Aa8101d05512f76FFb70A9B',
-    MainAddress: '0x99Bfdb456202dF38e1159949A9235D30381b74A8'
+    MainAddress: '0xdfC8851f5a46889111C92f15B5E477e1C2494f33'
 }
 
 // let web3 = web3j.web3();

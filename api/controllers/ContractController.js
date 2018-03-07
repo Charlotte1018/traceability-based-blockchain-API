@@ -1,10 +1,3 @@
-/**
- * PurchaseController
- *
- * @description :: Server-side logic for managing purchases
- * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
- */
-
 module.exports = {
     publicVariable: function (req, res) {
         let web3 = web3j.web3();
@@ -231,6 +224,7 @@ module.exports = {
                 info: '账户地址有误'
             });
         };
-    }
+    },
+
 };
 

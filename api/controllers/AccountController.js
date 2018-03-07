@@ -53,7 +53,7 @@ module.exports = {
                     from: params.from,
                     to: params.to,
                     value: web3.toWei(params.value),
-                    data: web3.toHex(params.data),
+                    data: web3.toHex(params.data)||`${params.value}ether`,
                 }, (error, result) => {
                     if (!error) {
                         res.send({

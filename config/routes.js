@@ -42,13 +42,41 @@ module.exports.routes = {
   'get /api/Contract/public': 'Contract.publicVariable',
   'post /api/Contract/company/register': 'Contract.registerCompany',
   'post /api/Contract/company/registerBasicInfo': 'Contract.registerBasicInfo',
+
+  //管理员,审核公司注册信息
+  'post /api/Admin/auditRegister': 'Admin.auditRegister',
+  //管理员登录
+  'post /api/Admin/adminLogin':'Login.adminLogin',
+  //企业登录
+  'post /api/Company/login':'Login.login',
   /**
   * 新的粮食追溯合约接口
   * get方法
   */
   'get /api/Contract/basicContractInfo':'Contract.basicContractInfo',
+
   //企业注册公司信息
-  'post /api/Contract/enterpriseRegister':'Contract.enterpriseRegister'
+  'post /api/Company/enterpriseRegister':'Company.enterpriseRegister',
+  //企业添加库区
+  'post /api/Company/addNewReservoir':'Company.addNewReservoir',
+  //企业添加仓库
+  'post /api/Company/addNewStock':'Company.addNewStock',
+  //企业添加敖间
+  'post /api/Company/addNewAo':'Company.addNewAo',
+  //企业添加货位
+  'post /api/Company/addNerGoods':'Company.addNerGoods',
+  //企业出库登记
+  'post /api/Company/addStockOut':'Company.addStockOut',
+  //企业入库登记
+  'post /api/Company/addStockIn':'Company.addStockIn',
+
+  //查询
+  //企业预注册信息
+  'get /api/Search/getPreEnterprises':'Search.getPreEnterprises',
+  //企业注册信息
+  'get /api/Search/getEnterprises':'Search.getEnterprises',
+  //管理员的待审核信息
+  'get /api/Search/getPendingTask':'Search.getPendingTask',
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

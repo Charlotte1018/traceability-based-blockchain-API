@@ -182,13 +182,13 @@ module.exports = {
      * @returns {[*]}
      */
     addNewStock: (req, res) => {
-        let prama = req.body;
+        let param = req.body;
         let web3 = web3j.web3();
         let contractInstance = contractInstanceUtils.getMainContractInstance();
         let unlock = web3.personal.unlockAccount(param.account, param.password);
         let isAddress = web3.isAddress(param.account);
-        let pramas = {
-            _reservoirNo: prama._reservoirNo,
+        let params = {
+            _reservoirNo: param._reservoirNo,
             _rName: web3.fromAscii(param._rName),
             _name: web3.fromAscii(param._name),
             _type: web3.fromAscii(param._type),
@@ -198,12 +198,12 @@ module.exports = {
         if (isAddress) {
             if (unlock) {
                 contractInstance.addNewStock(
-                    pramas._reservoirNo,
-                    pramas._rName,
-                    pramas._name,
-                    pramas._type,
-                    pramas._capacity,
-                    pramas._validCapacity,
+                    params._reservoirNo,
+                    params._rName,
+                    params._name,
+                    params._type,
+                    params._capacity,
+                    params._validCapacity,
                     {
                         from: param.account,
                         gas: 10000000
@@ -247,26 +247,26 @@ module.exports = {
      * @returns {[*]}
      */
     addNewAo: (req, res) => {
-        let prama = req.body;
+        let param = req.body;
         let web3 = web3j.web3();
         let contractInstance = contractInstanceUtils.getMainContractInstance();
         let unlock = web3.personal.unlockAccount(param.account, param.password);
         let isAddress = web3.isAddress(param.account);
-        let pramas = {
-            _reservoirNo: prama._reservoirNo,
+        let params = {
+            _reservoirNo: param._reservoirNo,
             _rName: web3.fromAscii(param._rName),
-            _barnNo: web3.fromAscii(param._barnNo),
+            _barnNo: param._barnNo,
             _stockName: web3.fromAscii(param._stockName),
             _name: web3.fromAscii(param._name)
         };
         if (isAddress) {
             if (unlock) {
                 contractInstance.addNewAo(
-                    pramas._reservoirNo,
-                    pramas._rName,
-                    pramas._barnNo,
-                    pramas._stockName,
-                    pramas._name,
+                    params._reservoirNo,
+                    params._rName,
+                    params._barnNo,
+                    params._stockName,
+                    params._name,
                     {
                         from: param.account,
                         gas: 10000000
@@ -311,18 +311,18 @@ module.exports = {
      * @returns {[*]}
      */
     addNerGoods: (req, res) => {
-        let prama = req.body;
+        let param = req.body;
         let web3 = web3j.web3();
         let contractInstance = contractInstanceUtils.getMainContractInstance();
         let unlock = web3.personal.unlockAccount(param.account, param.password);
         let isAddress = web3.isAddress(param.account);
-        let pramas = {
-            _gNo: prama._gNo,
-            _rNo: prama._rNo,
+        let params = {
+            _gNo: param._gNo,
+            _rNo: param._rNo,
             _rName: web3.fromAscii(param._rName),
-            _sBarnNo: prama._sBarnNo,
+            _sBarnNo: param._sBarnNo,
             _sName: web3.fromAscii(param._sName),
-            _aNo: prama._aNo,
+            _aNo: param._aNo,
             _aName: web3.fromAscii(param._aName),
             _gName: web3.fromAscii(param._gName),
             _gFlag: web3.fromAscii(param._gFlag),
@@ -331,16 +331,16 @@ module.exports = {
         if (isAddress) {
             if (unlock) {
                 contractInstance.addNerGoods(
-                    pramas._gNo,
-                    pramas._rNo,
-                    pramas._rName,
-                    pramas._sBarnNo,
-                    pramas._sName,
-                    pramas._aNo,
-                    pramas._aName,
-                    pramas._gName,
-                    pramas._gFlag,
-                    pramas._gCurrentCapacity,
+                    params._gNo,
+                    params._rNo,
+                    params._rName,
+                    params._sBarnNo,
+                    params._sName,
+                    params._aNo,
+                    params._aName,
+                    params._gName,
+                    params._gFlag,
+                    params._gCurrentCapacity,
                     {
                         from: param.account,
                         gas: 10000000
@@ -384,13 +384,13 @@ module.exports = {
      * @returns {[*]}
      */
     addStockOut: (req, res) => {
-        let prama = req.body;
+        let param = req.body;
         let web3 = web3j.web3();
         let contractInstance = contractInstanceUtils.getMainContractInstance();
         let unlock = web3.personal.unlockAccount(param.account, param.password);
         let isAddress = web3.isAddress(param.account);
-        let pramas = {
-            _ename: web3.fromAscii(param._gName),
+        let params = {
+            _ename: web3.fromAscii(param._ename),
             _pname: web3.fromAscii(param._pname),
             _pquantity: param._pquantity,
             _pTraceCode: param._pTraceCode
@@ -398,10 +398,10 @@ module.exports = {
         if (isAddress) {
             if (unlock) {
                 contractInstance.addStockOut(
-                    pramas._ename,
-                    pramas._pname,
-                    pramas._pquantity,
-                    pramas._pTraceCode,
+                    params._ename,
+                    params._pname,
+                    params._pquantity,
+                    params._pTraceCode,
                     {
                         from: param.account,
                         gas: 10000000
@@ -446,13 +446,13 @@ module.exports = {
      * @returns {[*]}
      */
     addStockIn: (req, res) => {
-        let prama = req.body;
+        let param = req.body;
         let web3 = web3j.web3();
         let contractInstance = contractInstanceUtils.getMainContractInstance();
         let unlock = web3.personal.unlockAccount(param.account, param.password);
         let isAddress = web3.isAddress(param.account);
-        let pramas = {
-            _ename: web3.fromAscii(param._gName),
+        let params = {
+            _ename: web3.fromAscii(param._ename),
             _gNo: param._gNo,
             _province: web3.fromAscii(param._province),
             _city: web3.fromAscii(param._city),
@@ -462,23 +462,22 @@ module.exports = {
             _variety: web3.fromAscii(param._variety),
             _level: web3.fromAscii(param._level),
             _quantity: param._quantity,
-            _qReport: web3.fromAscii(param._qReport),
-
+            _qReport: web3.fromAscii(param._qReport)
         };
         if (isAddress) {
             if (unlock) {
                 contractInstance.addStockIn(
-                    pramas._ename,
-                    pramas._gNo,
-                    pramas._province,
-                    pramas._city,
-                    pramas._county,
-                    pramas._town,
-                    pramas._pYear,
-                    pramas._variety,
-                    pramas._level,
-                    pramas._quantity,
-                    pramas._qReport,
+                    params._ename,
+                    params._gNo,
+                    params._province,
+                    params._city,
+                    params._county,
+                    params._town,
+                    params._pYear,
+                    params._variety,
+                    params._level,
+                    params._quantity,
+                    params._qReport,
                     {
                         from: param.account,
                         gas: 10000000

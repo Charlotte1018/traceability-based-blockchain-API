@@ -64,7 +64,7 @@ module.exports.routes = {
   //企业添加敖间
   'post /api/Company/addNewAo':'Company.addNewAo',
   //企业添加货位
-  'post /api/Company/addNerGoods':'Company.addNerGoods',
+  'post /api/Company/addNewGoods':'Company.addNerGoods',
   //企业出库登记
   'post /api/Company/addStockOut':'Company.addStockOut',
   //企业入库登记
@@ -77,6 +77,18 @@ module.exports.routes = {
   'get /api/Search/getEnterprises':'Search.getEnterprises',
   //管理员的待审核信息
   'get /api/Search/getPendingTask':'Search.getPendingTask',
+  //查询库区信息getReservoirs
+  'get /api/Search/getReservoirs':'Search.getReservoirs',
+  //查询仓库信息
+  'get /api/Search/getStocks':'Search.getStocks',
+  //查询厫间信息
+  'get /api/Search/getAos':'Search.getAos',
+  //查询货位信息
+  'get /api/Search/getGoods':'Search.getGoods',
+  //查询入库信息
+  'get /api/Search/getStockInList':'Search.getStockInList',
+  //查询出库信息
+  'get /api/Search/getStockOutList':'Search.getStockOutList',
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

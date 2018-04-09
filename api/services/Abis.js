@@ -740,19 +740,6 @@ module.exports = {
             "constant": false,
             "inputs": [
                 {
-                    "name": "_user",
-                    "type": "address"
-                }
-            ],
-            "name": "createRelevantContract",
-            "outputs": [],
-            "payable": false,
-            "type": "function"
-        },
-        {
-            "constant": false,
-            "inputs": [
-                {
                     "name": "e_name",
                     "type": "bytes32"
                 }
@@ -789,6 +776,41 @@ module.exports = {
                 }
             ],
             "name": "stockOutManagementAddr",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "payable": false,
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "_user",
+                    "type": "address"
+                },
+                {
+                    "name": "_flag",
+                    "type": "bool"
+                }
+            ],
+            "name": "createRelevantContract",
+            "outputs": [],
+            "payable": false,
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "",
+                    "type": "bytes32"
+                }
+            ],
+            "name": "nameToAddress",
             "outputs": [
                 {
                     "name": "",
@@ -1775,7 +1797,7 @@ module.exports = {
             "type": "function"
         }
     ],
-    ClientManagementAbi: [
+    ClientManagementAbiAbi: [
         {
             "constant": false,
             "inputs": [
@@ -1964,6 +1986,220 @@ module.exports = {
                     "type": "bytes32"
                 }
             ],
+            "payable": false,
+            "type": "function"
+        }
+    ],
+    StockInManagementAbi: [
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "_ename",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "_gNo",
+                    "type": "uint256"
+                },
+                {
+                    "name": "_province",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "_city",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "_county",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "_town",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "_pYear",
+                    "type": "uint256"
+                },
+                {
+                    "name": "_variety",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "_level",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "_quantity",
+                    "type": "uint256"
+                },
+                {
+                    "name": "_qReport",
+                    "type": "bytes32"
+                }
+            ],
+            "name": "stockIn",
+            "outputs": [],
+            "payable": false,
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "stockInList",
+            "outputs": [
+                {
+                    "name": "ename",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "gNo",
+                    "type": "uint256"
+                },
+                {
+                    "name": "province",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "city",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "county",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "town",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "pYear",
+                    "type": "uint256"
+                },
+                {
+                    "name": "variety",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "level",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "quantity",
+                    "type": "uint256"
+                },
+                {
+                    "name": "qReport",
+                    "type": "bytes32"
+                }
+            ],
+            "payable": false,
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "",
+                    "type": "bytes32"
+                }
+            ],
+            "name": "stockInNum",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "type": "function"
+        }
+    ],
+    StockOutManagementAbi: [
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "",
+                    "type": "bytes32"
+                }
+            ],
+            "name": "stockOutNum",
+            "outputs": [
+                {
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "name": "",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "stockOutList",
+            "outputs": [
+                {
+                    "name": "eName",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "pName",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "pQuantity",
+                    "type": "uint256"
+                },
+                {
+                    "name": "pTraceCode",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "name": "_ename",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "_pname",
+                    "type": "bytes32"
+                },
+                {
+                    "name": "_pquantity",
+                    "type": "uint256"
+                },
+                {
+                    "name": "_pTraceCode",
+                    "type": "uint256"
+                }
+            ],
+            "name": "stockOut",
+            "outputs": [],
             "payable": false,
             "type": "function"
         }
